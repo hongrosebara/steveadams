@@ -14,8 +14,14 @@
 <body>
     <header class="header">
         <div class="container">
+            <div class="header__logo">
+                <a href="index.html">steveadams</a>
+            </div>
             <div class="header-container">
                 <div class="header__content">
+                    <div class="header__image-box">
+                        <img class="header__image" src="assets/steveadams-bookcover 2.png" alt="steve adams walking through the mirror">
+                    </div>
                     <div class="header__text-box">
                         <h1 class="header__heading">Welcome</h1>
                         <div class="header__subheading">
@@ -24,18 +30,22 @@
                         <div class="header__description">
                             <p>Throughout this true story, Steven has seamlessly merged many worlds, from wild adventure to the ecosphere of a coma, from the high drama of life lived on a knife’s edge, to the overcoming of adversity in the form of total blindness. During the course of these pages it is impossible to guess which way the story will turn, and I was kept on the edge of my seat in a constant rollercoaster of psychology, intellect, daring, beautiful imagery, adventure and deep thought processes, to name a few.</p>
                         </div>
-                        <button class="button header__button">Purchase</button>
 
-                        <div id="smart-button-container">
-                            <div style="text-align: center;">
-                              <div id="paypal-button-container"></div>
-                            </div>
-                          </div>
-                                     
-                    
-                    </div>
-                    <div class="header__image-box">
-                        <img class="header__image" src="assets/steveadams-bookcover 2.png" alt="steve adams walking through the mirror">
+                        <div>
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="andrew@andrewdyster.com">
+                            <input type="hidden" name="lc" value="AU">
+                            <input type="hidden" name="item_name" value="Journey Through the Mirror">
+                            <input type="hidden" name="amount" value="20.00">
+                            <input type="hidden" name="currency_code" value="AUD">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="shipping" value="30.00">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,8 +72,16 @@
             <h3 class="secondary-heading author__subheading">Steve Adams</h3>
             <div class="mt-24 author__text-box">
                 <p>Steve Adams was born in Albany, Western Australia in 1968. His life has been filled with adventure both in Australia and all over the world. Being blinded in an accident 14 years ago, changed the course of his life and he now lives quietly in the countryside of WA, with his wife Diana and two children.</p>
-                <button class="button author__button">Contact Steve</button>
+                <button class="button author__button">
+                    <a href="contact.html" target="_blank">
+                        Contact Steve
+                    </a>
+                </button>
             </div>
+        </section>
+
+        <section class="container testimonial">
+
         </section>
     </main> 
 </body>
