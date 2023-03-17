@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@300;400;500;600;700&display=swap");
 
 :root {
   --clr-primary: #cf9c46;
-  --clr-secondary: #cf3914;
-  --clr-tertiary: #787558;
+  --clr-secondary: 	#becf46;
+  --clr-tertiary: #cf5846;
   --clr-accent-1: #94c60a;
   --clr-accent-2: #552049;
-  --clr-hover-1: #755CDE;
-  --clr-hover-2: #F6A560;
-  --clr-hover-3: #7A746E;
+  --clr-hover-1: #755cde;
+  --clr-hover-2: #f6a560;
+  --clr-hover-3: #7a746e;
   --clr-white: #ffffff;
   --clr-black: #000;
   --clr-light: #989697;
 
-  --ff-body: 'Raleway', sans-serif;
-  --ff-button: 'Oswald', sans-serif;
+  --ff-body: "Raleway", sans-serif;
+  --ff-button: "Oswald", sans-serif;
 }
 
 /* ------------------- */
@@ -40,7 +40,7 @@ h5,
 p,
 figure,
 picture {
-  margin: 0; 
+  margin: 0;
 }
 
 h1,
@@ -53,7 +53,15 @@ p {
   font-weight: 400;
 }
 
+ul {
+  margin: 0;
+}
+
 /* set up the body */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
@@ -79,7 +87,7 @@ select {
 }
 
 /* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -92,7 +100,7 @@ select {
 
 /* Utility classes */
 .primary-heading {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   text-transform: uppercase;
@@ -113,24 +121,41 @@ select {
 .button {
   padding: 8px 20px;
   font-size: 20px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   cursor: pointer;
   border: 2px solid #fff;
 }
 
 @media only screen and (min-width: 768px) {
+  .primary-heading {
+    font-size: 36px;
+  }
+
   .secondary-heading {
     font-size: 18px;
   }
 }
 
 /* Main css */
-
 .container {
-  max-width: 1440px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 39px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 71px 165px;
+  }
 }
 
 .header {
@@ -145,7 +170,8 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)) , url('assets/forest.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("assets/forest.jpg");
   background-position: center;
   background-repeat: none;
   background-size: cover;
@@ -159,9 +185,45 @@ select {
 
 .header__logo {
   color: var(--clr-white);
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
   font-size: 24px;
   text-align: center;
+}
+
+.header__logo a {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+
+.header-menu {
+  font-family: "Oswald", sans-serif;
+  line-height: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-menu ul li {
+  color: var(--clr-white);
+  font-size: 18px;
+  list-style-type: none;
+}
+
+.main-menu ul li a {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+
+.main-menu ul li a:hover {
+  color: var(--clr-primary);
 }
 
 .header-container {
@@ -219,11 +281,13 @@ select {
   background: var(--clr-secondary);
 }
 
-@media only screen and (min-width: 768px) {
-
-  .container {
-    padding: 39px;
+@media only screen and (max-width: 480px) {
+  .main-menu {
+    display: none !important  ;
   }
+}
+
+@media only screen and (min-width: 768px) {
 
   .header-container {
     padding: 60px 0;
@@ -272,24 +336,10 @@ select {
   }
 }
 
-@media only screen and (min-width: 1440px) {
-
-  .container {
-    padding: 60px 165px;
-  }
-
-  .section-container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 24px;
-  }
-}
-
-
 .book__text-box {
   display: flex;
   flex-direction: column;
-  gap: 24px;  
+  gap: 24px;
 }
 
 .book__subheading span {
@@ -298,7 +348,7 @@ select {
 
 .author {
   color: var(--clr-white);
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-tertiary);
   border: none;
 }
 
@@ -323,9 +373,235 @@ select {
 
 .author__button a {
   color: var(--clr-white);
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .author__button a:hover {
   color: var(--clr-black);
+}
+
+/* Testimonials */
+.previous-testimonials {
+  background-color: var(--clr-white);
+}
+
+.testimonial__heading {
+  color: var(--clr-black);
+}
+
+.testimonial__subheading {
+  color: var(--clr-black);
+}
+
+.testimonial__subheading span {
+  color: var(--clr-tertiary);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 24px;
+}
+
+@media (min-width: 1440px) {
+  .row {
+    display: grid;
+    grid-template: 282px 266px / 350px 350px 350px;
+    gap: 30px;
+  }
+}
+
+.grid-item {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+@media (min-width: 976px) {
+  .grid--one {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .grid--two {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .grid--five {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+
+  .grid--three {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .grid--four {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+.testimonials {
+  padding: 26px 32px 32px 32px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  border-radius: 8px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.testimonial--1 {
+  position: relative;
+  background-color: var(--clr-secondary);
+  color: var(--clr-white);
+}
+
+.testimonial--1::after {
+  position: absolute;
+  content: "";
+  width: 104px;
+  height: 102px;
+  right: 24px;
+  top: 0px;
+  background-image: url("/images/bg-pattern-quotation.svg");
+  color: var(--clr-primary);
+  z-index: 1;
+}
+
+.testimonial--1__content {
+  position: relative;
+  z-index: 10;
+}
+
+.testimonial--2 {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}
+
+.testimonial--3 {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.testimonial--4 {
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+.testimonial--5 {
+  background-color: var(--clr-light);
+  color: var(--clr-secondary-2);
+}
+
+.person {
+  z-index: 20;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.person__image {
+  border-radius: 9999px;
+  border: 2px solid #a775f1;
+}
+
+.person__image.person--2__image {
+  border: none;
+}
+
+.person__info h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 13px;
+  color: var(--clr-white);
+}
+
+.person__info p {
+  opacity: 0.5;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+.feedback--main {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 18px;
+}
+
+.feedback--main.feedback--4 {
+  color: #ecf2f8;
+}
+
+.feedback--sub {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  margin-top: 16px;
+}
+
+.feedback--sub.feedback--1 {
+  color: #cfcfcf;
+  margin-top: 40px;
+}
+
+@media (min-width: 976px) {
+  .feedback--sub.feedback--1 {
+    margin-top: 16px;
+  }
+}
+
+.feedback--sub.feedback--2 {
+  color: var(--clr-white);
+}
+
+.feedback--sub.feedback--3 {
+  color: #48556a;
+}
+
+.feedback--sub.feedback--4 {
+  color: var(--clr-white);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-black);
+  color: var(--clr-primary);
+}
+
+.footer-menu ul {
+  display: flex;
+  justify-content: start;
+  gap: 24px;
+  list-style-type: none;
+}
+
+.footer-menu ul li {
+  list-style-type: none;
+}
+
+.footer-menu ul li a {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+  color: var(--clr-primary);
 }
