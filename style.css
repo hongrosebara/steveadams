@@ -242,7 +242,6 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24px;
 }
 
 .header__heading {
@@ -360,7 +359,6 @@ select {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 24px;
 }
 
 .author__heading {
@@ -582,22 +580,24 @@ select {
   color: var(--clr-primary);
 }
 
-.footer-menu ul {
+.footer-menu {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   gap: 16px;
-  list-style-type: none;
 }
 
-.footer-menu ul li {
-  list-style-type: none;
-}
-
-.footer-menu ul li a {
+.footer-menu a {
   color: var(--clr-white);
   text-decoration: none;
 }
 
-.footer-menu ul li a:hover {
+.footer-menu a:hover {
   color: var(--clr-primary);
+}
+
+@media only screen and (min-width: 480px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
