@@ -2,7 +2,7 @@
 
 :root {
   --clr-primary: #cf9c46;
-  --clr-secondary: 	#becf46;
+  --clr-secondary: #becf46;
   --clr-tertiary: #cf5846;
   --clr-accent-1: #94c60a;
   --clr-accent-2: #552049;
@@ -584,8 +584,8 @@ select {
 
 .footer-menu ul {
   display: flex;
-  justify-content: start;
-  gap: 24px;
+  justify-content: center;
+  gap: 16px;
   list-style-type: none;
 }
 
