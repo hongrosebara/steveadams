@@ -200,7 +200,7 @@ select {
   font-family: "Oswald", sans-serif;
   line-height: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -303,6 +303,10 @@ select {
     gap: 60px;
   }
 
+  .header-menu {
+    justify-content: space-between;
+  }
+
   .header__text-box {
     flex: 0 1 auto;
     align-items: start;
@@ -343,7 +347,7 @@ select {
 }
 
 .book__subheading span {
-  color: var(--clr-secondary);
+  color: var(--clr-tertiary);
 }
 
 .author {
@@ -364,11 +368,11 @@ select {
 }
 
 .author__subheading {
-  color: var(--clr-primary);
+  color: var(--clr-secondary);
 }
 
 .author__button {
-  background: var(--clr-primary);
+  background: var(--clr-secondary);
 }
 
 .author__button a {
@@ -459,8 +463,8 @@ select {
 
 .testimonial--1 {
   position: relative;
-  background-color: var(--clr-secondary);
-  color: var(--clr-white);
+  background-color: var(--clr-white);
+  color: var(--clr-black);
 }
 
 .testimonial--1::after {
@@ -471,7 +475,7 @@ select {
   right: 24px;
   top: 0px;
   background-image: url("/images/bg-pattern-quotation.svg");
-  color: var(--clr-primary);
+  color: var(--clr-secondary);
   z-index: 1;
 }
 
@@ -486,13 +490,13 @@ select {
 }
 
 .testimonial--3 {
-  background-color: var(--clr-black);
-  color: var(--clr-white);
+  background-color: var(--clr-white);
+  color: var(--clr-black);
 }
 
 .testimonial--4 {
-  background-color: var(--clr-primary);
-  color: var(--clr-light);
+  background-color: var(--clr-white);
+  color: var(--clr-black);
 }
 
 .testimonial--5 {
@@ -520,9 +524,8 @@ select {
 
 .person__info h3 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 13px;
-  color: var(--clr-white);
 }
 
 .person__info p {
@@ -531,16 +534,8 @@ select {
   line-height: 11px;
 }
 
-.feedback--main {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
+.feedback--main { 
   margin-top: 18px;
-}
-
-.feedback--main.feedback--4 {
-  color: #ecf2f8;
 }
 
 .feedback--sub {
@@ -582,6 +577,7 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   background: var(--clr-black);
   color: var(--clr-primary);
 }
