@@ -573,8 +573,8 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
   font-size: 18px;
+  gap: 24px;
   font-family: 'Oswald', sans-serif;
   background: var(--clr-black);
   color: var(--clr-primary);
@@ -599,5 +599,6 @@ select {
   .footer {
     flex-direction: row;
     justify-content: space-between;
+    font-size: 16px;
   }
 }
