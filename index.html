@@ -14,7 +14,7 @@
       <div class="container">
         <div class="header-menu">
           <div class="header__logo">
-            <a href="index.html">steveadams</a>
+            <a href="index.html">steve<span>adams</span></a>
           </div>
           <nav class="main-menu">
             <ul>
@@ -39,7 +39,7 @@
               <img
                 class="header__image"
                 src="assets/steveadams-bookcover 2.png"
-                alt="steve adams walking through the mirror"
+                alt="Journey Through The Mirror"
               />
             </div>
             <div class="header__text-box">
@@ -143,23 +143,38 @@
         <h2 class="primary-heading author__heading">About The Author</h2>
         <h3 class="secondary-heading author__subheading">Steve Adams</h3>
         <div class="mt-24 author__text-box">
-          <p>
+          <p id="contact">
             Steve Adams was born in Albany, Western Australia in 1968. His life
             has been filled with adventure both in Australia and all over the
             world. Being blinded in an accident 14 years ago, changed the course
             of his life and he now lives quietly in the countryside of WA, with
             his wife Diana and two children.
           </p>
-          <button id="contact" class="mt-24 button author__button">
-            <a href="" target="_blank"> Contact Steve </a>
+          <button class="mt-24 button author__button" onclick="openForm()">
+             Contact Steve
           </button>
+
+          <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Contact</h1>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
         </div>
       </section>
 
       <section id="testimonials" class="container previous-testimonials">
         <h2 class="primary-heading testimonial__heading">Testimonials</h2>
         <h3 class="secondary-heading testimonial__subheading">
-          for Steve's Previous Book <span>"Monkey On The Wing"</span>
+          for <span>Steve's books</span>
         </h3>
         <div class="mt-24 row">
           <div class="grid-item grid--one">
