@@ -10,7 +10,7 @@
   --clr-hover-2: #f6a560;
   --clr-hover-3: #7a746e;
   --clr-white: #ffffff;
-  --clr-black: #000;
+  --clr-black: #0e1111;
   --clr-light: #989697;
 
   --ff-body: "Raleway", sans-serif;
@@ -55,6 +55,7 @@ p {
 
 ul {
   margin: 0;
+  padding: 0;
 }
 
 /* set up the body */
@@ -217,6 +218,7 @@ select {
   color: var(--clr-white);
   font-size: 18px;
   list-style-type: none;
+  cursor: pointer;
 }
 
 .main-menu ul li a {
@@ -289,7 +291,6 @@ select {
 }
 
 @media only screen and (min-width: 768px) {
-
   .header-container {
     padding: 60px 0;
   }
@@ -534,7 +535,7 @@ select {
   line-height: 11px;
 }
 
-.feedback--main { 
+.feedback--main {
   margin-top: 18px;
 }
 
@@ -579,7 +580,7 @@ select {
   align-items: center;
   font-size: 18px;
   gap: 24px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   background: var(--clr-black);
   color: var(--clr-primary);
 }
@@ -588,6 +589,8 @@ select {
   display: flex;
   justify-content: start;
   gap: 16px;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 .footer-menu a {
@@ -607,62 +610,119 @@ select {
   }
 }
 
-/* Button used to open the contact form - fixed at the bottom of the page */
+/* Open Modal  */
 
-/* The popup form - hidden by default */
-.form-popup {
+#modal {
   display: none;
   position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+  margin: auto;
+  height: 55%;
+  width: 100vw;
+  max-width: 350px;
+  border-radius: 5px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  background-color: var(--clr-black);
+  color: var(--clr-light);
+  z-index: 1000;
 }
 
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: var(--clr-white);
+.modal-inner {
+  width: 290px;
+  margin: 0 auto;
 }
 
-.form-container h1 {
-  color: var(--clr-black);
-}
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+.modal-inner h2 {
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--clr-tertiary);
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+.modal-inner-loading {
+  text-align: center;
 }
 
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
+/* modal buttons */
+
+.close-modal-btn-container {
+  text-align: right;
+  margin: 9px;
+}
+
+.modal-close-btn {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: whitesmoke;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active {
+  color: var(--clr-tertiary);
+  cursor: pointer;
+}
+
+.modal-close-btn:disabled {
+  color: whitesmoke;
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.modal-choice-btns {
+  margin-top: 10px;
+  padding: 8px 0;
+  display: flex;
+  justify-content: start;
+}
+
+.modal-btn {
+  padding: 10px 24px;
   cursor: pointer;
   width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+  background-color: var(--clr-tertiary);
+  color: var(--clr-white);
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
+.modal-btn:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-black);
 }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .author__button:hover {
-  opacity: 1;
-  z-index: 100;
+/* modal input */
+
+#consent-form input {
+  margin-top: 10px;
+  border: 1px solid #212529;
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+#consent-form textarea {
+  margin-top: 10px;
+  border: 1px solid #212529;
+  padding: 10px;
+  height: 120px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+/* modal after submit */
+
+.loading {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.modal-display-name {
+  color: var(--clr-tertiary);
+}
+
+.modal-text {
+  line-height: 23px;
+  margin-bottom: 0;
 }

@@ -6,7 +6,7 @@
     <title>Steve Adams</title>
 
     <link rel="stylesheet" href="style.css" />
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
   </head>
 
   <body>
@@ -27,8 +27,8 @@
               <li>
                 <a href="#testimonials"> Testimonials </a>
               </li>
-              <li>
-                <a href="#contact"> Contact </a>
+              <li onclick="openModal()">
+                <a> Contact </a>
               </li>
             </ul>
           </nav>
@@ -90,7 +90,7 @@
                   />
                   <input
                     type="image"
-                    src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/34_Yellow_CheckOut_Pill_Button.png"
+                    src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/44_Yellow_CheckOut_Pill_Button.png"
                     border="0"
                     name="submit"
                     alt="PayPal – The safer, easier way to pay online!"
@@ -150,23 +150,50 @@
             of his life and he now lives quietly in the countryside of WA, with
             his wife Diana and two children.
           </p>
-          <button class="mt-24 button author__button" onclick="openForm()">
-             Contact Steve
+          <button
+            id="contact-button"
+            class="mt-24 button author__button"
+            onclick="openModal()"
+          >
+            Contact Steve
           </button>
 
-          <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-              <h1>Contact</h1>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
+          <div class="modal" id="modal">
+            <div class="close-modal-btn-container">
+              <button
+                onclick="closeModal()"
+                class="modal-close-btn"
+                id="modal-close-btn"
+              >
+                X
+              </button>
+            </div>
+            <div class="modal-inner" id="modal-inner">
+              <h2>Contact Steve</h2>
+              <p class="modal-text" id="modal-text">
+                Please fill out this form
+              </p>
+              <form
+                id="consent-form"
+                action="https://formspree.io/f/mvonbbyl"
+                method="POST"
+              > 
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+                <div class="modal-choice-btns" id="modal-choice-btns">
+                  <button type="submit" class="modal-btn">Send</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -268,12 +295,12 @@
     </main>
 
     <footer class="container footer">
-      <div class="footer-menu">
-        <a href="index.html"> Home </a>
-        <a href="#author"> Author </a>
-        <a href="#testimonials"> Testimonials </a>
-        <a href="#contact"> Contact </a>
-      </div>
+      <ul class="footer-menu">
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="#author"> Author </a></li>
+        <li><a href="#testimonials"> Testimonials </a></li>
+        <li onclick="openModal()"><a> Contact </a></li>
+      </ul>
       <div class="footer-copyright">© Steve Adams. All rights reserved.</div>
     </footer>
   </body>
