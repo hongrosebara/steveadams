@@ -17,38 +17,36 @@ async function handleSubmit(event) {
   var status = document.getElementById("my-form-status");
   var data = new FormData(event.target);
 
-  modalText.innerHTML = `
-  <div class="modal-inner-loading">
-      <img src="images/loading.svg" class="loading">
-      <p id=""my-form-status"">
-        Sending ... 
-      </p>
-  </div>`
-
-  setTimeout( () => {
-    document.getElementById("my-form-status").innerText = `Success ...`
-    finalMessage()
-  }, 1500)
-
-  const finalMessage = () => {
-    setTimeout( () => {
-      document.getElementById('modal-inner').innerHTML = `
-      <h2>Thank you!</h2>
-      <p>I am happy to receive your message and will get back to you shortly!
-      </p>
-  ` 
-  }, 1500)
-  }
-
   fetch(event.target.action, {
     method: form.method,
     body: data,
     headers: {
-        'Accept': 'application/json'
+      'Accept': 'application/json'
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Thanks for your submission!";
+      modalText.innerHTML = `
+      <div class="modal-inner-loading">
+          <img src="images/loading.svg" class="loading">
+          <p id=""my-form-status"">
+            Sending ... 
+          </p>
+      </div>`
+    
+      setTimeout( () => {
+        document.getElementById("my-form-status").innerText = `Success ...`
+        finalMessage()
+      }, 1500)
+    
+      const finalMessage = () => {
+        setTimeout( () => {
+          document.getElementById('modal-inner').innerHTML = `
+          <h2>Thank you!</h2>
+          <p>I am happy to receive your message and will get back to you shortly!
+          </p>
+      ` 
+      }, 1500)
+      }
       form.reset()
     } else {
       response.json().then(data => {
