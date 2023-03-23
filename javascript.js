@@ -1,7 +1,7 @@
 const modalOpenBtn = document.getElementById("contact-button");
 const modal = document.getElementById("modal");
 const modalCloseBtn = document.getElementById("modal-close-btn");
-const consentForm = document.getElementById("consent-form");
+const form = document.getElementById("consent-form");
 const modalText = document.getElementById("modal-text");
 
 const openModal = () => {
@@ -17,6 +17,29 @@ async function handleSubmit(event) {
   var status = document.getElementById("my-form-status");
   var data = new FormData(event.target);
 
+  modalText.innerHTML = `
+  <div class="modal-inner-loading">
+      <img src="images/loading.svg" class="loading">
+      <p id=""my-form-status"">
+        Sending ... 
+      </p>
+  </div>`
+
+  setTimeout( () => {
+    document.getElementById("my-form-status").innerText = `Success ...`
+    finalMessage()
+  }, 1500)
+
+  const finalMessage = () => {
+    setTimeout( () => {
+      document.getElementById('modal-inner').innerHTML = `
+      <h2>Thank you!</h2>
+      <p>I am happy to receive your message and will get back to you shortly!
+      </p>
+  ` 
+  }, 1500)
+  }
+
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -25,7 +48,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Success ...";
+      status.innerHTML = "Thanks for your submission!";
       form.reset()
     } else {
       response.json().then(data => {
