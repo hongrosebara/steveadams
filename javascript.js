@@ -16,6 +16,7 @@ async function handleSubmit(event) {
   event.preventDefault();
   var status = document.getElementById("my-form-status");
   var data = new FormData(event.target);
+
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -24,7 +25,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Thanks for your submission!";
+      status.innerHTML = "Success ...";
       form.reset()
     } else {
       response.json().then(data => {
@@ -39,10 +40,5 @@ async function handleSubmit(event) {
     status.innerHTML = "Oops! There was a problem submitting your form"
   });
 }
+
 form.addEventListener("submit", handleSubmit)
-
-consentForm.addEventListener("submit", function (e) {
-  e.preventDefault()
-
-  handleSubmit()
-})
