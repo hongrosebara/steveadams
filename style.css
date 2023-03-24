@@ -390,14 +390,6 @@ select {
 
 .author__button {
   background: var(--clr-secondary);
-}
-
-.author__button a {
-  color: var(--clr-white);
-  text-decoration: none;
-}
-
-.author__button a:hover {
   color: var(--clr-black);
 }
 
@@ -636,7 +628,7 @@ select {
   right: 0;
   bottom: 0;
   margin: auto;
-  height: 90vh;
+  height: 450px;
   width: 100vw;
   max-width: 350px;
   border-radius: 5px;
@@ -645,12 +637,6 @@ select {
   color: var(--clr-light);
   z-index: 1000;
 }
-
-@media and (min-width: 768px) {
-  #modal {
-    height: 55%;
-  }
-} 
 
 .modal-inner {
   width: 290px;
