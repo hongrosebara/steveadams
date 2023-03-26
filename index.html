@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steve Adams</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/main.css" />
     <script src="javascript.js" defer></script>
   </head>
 
@@ -36,11 +36,23 @@
         <div class="header-container">
           <div class="header__content">
             <div class="header__image-box">
-              <img
+              <!-- <img
                 class="header__image"
-                src="assets/steveadams-bookcover 2.png"
+                src="images/steveadams-bookcover.jpg"
                 alt="Journey Through The Mirror"
-              />
+              /> -->
+              <picture>
+                <img
+                sizes="(max-width: 1799px) 100vw, 1799px"
+                srcset="
+                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_300.webp 300w,
+                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_594.webp 594w,
+                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_912.webp 912w,
+                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_1243.webp 1243w,
+                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_1799.webp 1799w"
+                src="images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_1799.webp"
+                alt="">
+                </picture>
             </div>
             <div class="header__text-box">
               <h1 class="header__heading">Welcome</h1>
@@ -48,15 +60,14 @@
                 For anyone who wants to be inspired
               </div>
               <div class="mt-24 header__description">
-                  Throughout this true story, Steven has seamlessly merged many
-                  worlds, from wild adventure to the ecosphere of a coma, from
-                  the high drama of life lived on a knife’s edge, to the
-                  overcoming of adversity in the form of total blindness. During
-                  the course of these pages it is impossible to guess which way
-                  the story will turn, and I was kept on the edge of my seat in
-                  a constant rollercoaster of psychology, intellect, daring,
-                  beautiful imagery, adventure and deep thought processes, to
-                  name a few.
+                Throughout this true story, Steven has seamlessly merged many
+                worlds, from wild adventure to the ecosphere of a coma, from the
+                high drama of life lived on a knife’s edge, to the overcoming of
+                adversity in the form of total blindness. During the course of
+                these pages it is impossible to guess which way the story will
+                turn, and I was kept on the edge of my seat in a constant
+                rollercoaster of psychology, intellect, daring, beautiful
+                imagery, adventure and deep thought processes, to name a few.
               </div>
 
               <div class="mt-24">
@@ -103,188 +114,194 @@
 
     <main class="main">
       <section class="container book">
-        <h2 class="primary-heading book__heading">
-          Journey Through The Mirror
-        </h2>
-        <h3 class="secondary-heading book__subheading">
-          <span>From wild adventure</span> to the ecosphere of a coma
-        </h3>
-        <div class="mt-24 book__text-box">
-          <p>
-            Throughout this true story, Steven has seamlessly merged many
-            worlds, from wild adventure to the ecosphere of a coma, from the
-            high drama of life lived on a knife’s edge, to the overcoming of
-            adversity in the form of total blindness. During the course of these
-            pages it is impossible to guess which way the story will turn, and I
-            was kept on the edge of my seat in a constant rollercoaster of
-            psychology, intellect, daring, beautiful imagery, adventure and deep
-            thought processes, to name a few.
-          </p>
-          <p>
-            He has taken me on a journey into domains I had no idea existed and
-            has shown me the lighter side of life, in situations appearing too
-            dark to be laughed at. He has given me a totally different
-            perspective on how to move forward when life seems difficult to
-            face. Above all, it is entertainment at its best.
-          </p>
+        <div class="content-container">
+          <h2 class="primary-heading book__heading">
+            Journey Through The Mirror
+          </h2>
+          <h3 class="secondary-heading book__subheading">
+            <span>From wild adventure</span> to the ecosphere of a coma
+          </h3>
+          <div class="mt-24 book__text-box">
+            <p>
+              Throughout this true story, Steven has seamlessly merged many
+              worlds, from wild adventure to the ecosphere of a coma, from the
+              high drama of life lived on a knife’s edge, to the overcoming of
+              adversity in the form of total blindness. During the course of
+              these pages it is impossible to guess which way the story will
+              turn, and I was kept on the edge of my seat in a constant
+              rollercoaster of psychology, intellect, daring, beautiful imagery,
+              adventure and deep thought processes, to name a few.
+            </p>
+            <p>
+              He has taken me on a journey into domains I had no idea existed
+              and has shown me the lighter side of life, in situations appearing
+              too dark to be laughed at. He has given me a totally different
+              perspective on how to move forward when life seems difficult to
+              face. Above all, it is entertainment at its best.
+            </p>
 
-          <p>
-            Journey Through The Mirror has a stand alone style and it is fair to
-            say, it is unique.
-          </p>
+            <p>
+              Journey Through The Mirror has a stand alone style and it is fair
+              to say, it is unique.
+            </p>
 
-          <p>Jack Hondros, Editor.</p>
+            <p>Jack Hondros, Editor.</p>
+          </div>
         </div>
       </section>
 
       <section id="author" class="container author">
-        <h2 class="primary-heading author__heading">About The Author</h2>
-        <h3 class="secondary-heading author__subheading">Steve Adams</h3>
-        <div class="mt-24 author__text-box">
-          <p id="contact">
-            Steve Adams was born in Albany, Western Australia in 1968. His life
-            has been filled with adventure both in Australia and all over the
-            world. Being blinded in an accident 14 years ago, changed the course
-            of his life and he now lives quietly in the countryside of WA, with
-            his wife Diana and two children.
-          </p>
-          <button
-            id="contact-button"
-            class="mt-24 button author__button"
-            onclick="openModal()"
-          >
-            Contact Steve
-          </button>
+        <div class="content-container">
+          <h2 class="primary-heading author__heading">About The Author</h2>
+          <h3 class="secondary-heading author__subheading">Steve Adams</h3>
+          <div class="mt-24 author__text-box">
+            <p id="contact">
+              Steve Adams was born in Albany, Western Australia in 1968. His
+              life has been filled with adventure both in Australia and all over
+              the world. Being blinded in an accident 14 years ago, changed the
+              course of his life and he now lives quietly in the countryside of
+              WA, with his wife Diana and two children.
+            </p>
+            <button
+              id="contact-button"
+              class="mt-24 button author__button"
+              onclick="openModal()"
+            >
+              Contact Steve
+            </button>
 
-          <div class="modal" id="modal">
-            <div class="close-modal-btn-container">
-              <button
-                onclick="closeModal()"
-                class="modal-close-btn"
-                id="modal-close-btn"
-              >
-                X
-              </button>
-            </div>
-            <div class="modal-inner" id="modal-inner">
-              <h2>Contact Steve</h2>
-              <p class="modal-text" id="modal-text">
-                Please fill out this form
-              </p>
-              <form
-                id="consent-form"
-                action="https://formspree.io/f/mvonbbyl"
-                method="POST"
-              > 
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="Enter your message"
-                  required
-                ></textarea>
-                <p id="my-form-status"></p>
-                <div class="modal-choice-btns" id="modal-choice-btns">
-                  <button type="submit" class="modal-btn">Send</button>
-                </div>
-              </form>
+            <div class="modal" id="modal">
+              <div class="close-modal-btn-container">
+                <button
+                  onclick="closeModal()"
+                  class="modal-close-btn"
+                  id="modal-close-btn"
+                >
+                  X
+                </button>
+              </div>
+              <div class="modal-inner" id="modal-inner">
+                <h2>Contact Steve</h2>
+                <p class="modal-text" id="modal-text">
+                  Please fill out this form
+                </p>
+                <form
+                  id="consent-form"
+                  action="https://formspree.io/f/mvonbbyl"
+                  method="POST"
+                >
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Enter your message"
+                    required
+                  ></textarea>
+                  <p id="my-form-status"></p>
+                  <div class="modal-choice-btns" id="modal-choice-btns">
+                    <button type="submit" class="modal-btn">Send</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section id="testimonials" class="container previous-testimonials">
-        <h2 class="primary-heading testimonial__heading">Testimonials</h2>
-        <h3 class="secondary-heading testimonial__subheading">
-          for <span>Steve's books</span>
-        </h3>
-        <div class="mt-24 row">
-          <div class="grid-item grid--one">
-            <div class="testimonials testimonial--1">
-              <div class="testimonial--1__content">
-                <div class="person person--1">
-                  <img
-                    class="person__image person--2__image"
-                    src="images/image-patrick.jpg"
-                  />
-                  <div class="person__info">
-                    <h3>Miles</h3>
+        <div class="content-container">
+          <h2 class="primary-heading testimonial__heading">Testimonials</h2>
+          <h3 class="secondary-heading testimonial__subheading">
+            for <span>Steve's books</span>
+          </h3>
+          <div class="mt-24 row">
+            <div class="grid-item grid--one">
+              <div class="testimonials testimonial--1">
+                <div class="testimonial--1__content">
+                  <div class="person person--1">
+                    <img
+                      class="person__image person--2__image"
+                      src="images/image-patrick.jpg"
+                    />
+                    <div class="person__info">
+                      <h3>Miles</h3>
+                    </div>
                   </div>
-                </div>
-                <div class="feedback--main feedback--1">
-                  " Just finished your book and couldn't put it down, it was a
-                  great read. I felt I was walking alongside you in the rockies
-                  stopping for a smoke and having coffee. Also sititing on the
-                  fence watching you ride some wild brumby into the ground, it
-                  was unreal mate!
+                  <div class="feedback--main feedback--1">
+                    " Just finished your book and couldn't put it down, it was a
+                    great read. I felt I was walking alongside you in the
+                    rockies stopping for a smoke and having coffee. Also
+                    sititing on the fence watching you ride some wild brumby
+                    into the ground, it was unreal mate!
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="grid-item grid--two">
-            <div class="testimonials testimonial--2">
-              <div class="testimonial--2__content">
-                <div class="person person--2">
-                  <img
-                    class="person__image person--2__image"
-                    src="images/image-kira.jpg"
-                  />
-                  <div class="person__info">
-                    <h3>Monique</h3>
+            <div class="grid-item grid--two">
+              <div class="testimonials testimonial--2">
+                <div class="testimonial--2__content">
+                  <div class="person person--2">
+                    <img
+                      class="person__image person--2__image"
+                      src="images/image-kira.jpg"
+                    />
+                    <div class="person__info">
+                      <h3>Monique</h3>
+                    </div>
                   </div>
-                </div>
-                <div class="feedback--main feedback--2">
-                  " MOTW has been the most inspirational story I have ever read.
-                  Steve, your story is remarkable, reading your book bought me
-                  tears of sadness and happiness. "
+                  <div class="feedback--main feedback--2">
+                    " MOTW has been the most inspirational story I have ever
+                    read. Steve, your story is remarkable, reading your book
+                    bought me tears of sadness and happiness. "
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="grid-item grid--three">
-            <div class="testimonials testimonial--3">
-              <div class="testimonial--2__content">
-                <div class="person person--2">
-                  <img
-                    class="person__image person--2__image"
-                    src="images/image-jeanette.jpg"
-                  />
-                  <div class="person__info">
-                    <h3>Lizzy</h3>
+            <div class="grid-item grid--three">
+              <div class="testimonials testimonial--3">
+                <div class="testimonial--2__content">
+                  <div class="person person--2">
+                    <img
+                      class="person__image person--2__image"
+                      src="images/image-jeanette.jpg"
+                    />
+                    <div class="person__info">
+                      <h3>Lizzy</h3>
+                    </div>
                   </div>
-                </div>
-                <div class="feedback--main feedback--3">
-                  " I've just started reading MOTW and it's really compelling
-                  reading, you've done well my friend. I couldn't put it down
-                  last nite LOL "
+                  <div class="feedback--main feedback--3">
+                    " I've just started reading MOTW and it's really compelling
+                    reading, you've done well my friend. I couldn't put it down
+                    last nite LOL "
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="grid-item grid--four">
-            <div class="testimonials testimonial--4">
-              <div class="testimonial--2__content">
-                <div class="person person--2">
-                  <img
-                    class="person__image person--2__image"
-                    src="images/image-jonathan.jpg"
-                  />
-                  <div class="person__info">
-                    <h3>Patrick</h3>
+            <div class="grid-item grid--four">
+              <div class="testimonials testimonial--4">
+                <div class="testimonial--2__content">
+                  <div class="person person--2">
+                    <img
+                      class="person__image person--2__image"
+                      src="images/image-jonathan.jpg"
+                    />
+                    <div class="person__info">
+                      <h3>Patrick</h3>
+                    </div>
                   </div>
-                </div>
-                <div class="feedback--main feedback--4">
-                  " I have just finished your book. Your story is so inspiring
-                  and "real" and "honest". Even without your sight, your dreams
-                  have been realised as though you can see more clearly than you
-                  have ever seen before. Thank you for writing it. "
+                  <div class="feedback--main feedback--4">
+                    " I have just finished your book. Your story is so inspiring
+                    and "real" and "honest". Even without your sight, your
+                    dreams have been realised as though you can see more clearly
+                    than you have ever seen before. Thank you for writing it. "
+                  </div>
                 </div>
               </div>
             </div>
