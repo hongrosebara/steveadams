@@ -35,25 +35,30 @@
         </div>
         <div class="header-container">
           <div class="header__content">
-            <div class="header__image-box">
-              <!-- <img
-                class="header__image"
-                src="images/steveadams-bookcover.jpg"
-                alt="Journey Through The Mirror"
-              /> -->
-              <picture>
-                <img
-                sizes="(max-width: 1799px) 100vw, 1799px"
+            <picture class="header__image">
+              <source
+                media="(min-width:640px)"
                 srcset="
-                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_300.webp 300w,
-                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_594.webp 594w,
-                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_912.webp 912w,
-                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_1243.webp 1243w,
-                images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_1799.webp 1799w"
+                  images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_912.webp 912w
+                "
+              />
+              <source
+                media="(min-width:480px)"
+                srcset="
+                  images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_594.webp 594w
+                "
+              />
+              <source
+                media="(min-width:300px)"
+                srcset="
+                  images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_300.webp 300w
+                "
+              />
+              <img
                 src="images/steveadams-bookcover_bdcvwi/steveadams-bookcover_bdcvwi_c_scale,w_1799.webp"
-                alt="Journey Through The Mirror">
-                </picture>
-            </div>
+                alt="Journey Through The Mirror"
+              />
+            </picture>
             <div class="header__text-box">
               <h1 class="header__heading">Welcome</h1>
               <div class="mt-24 header__subheading">
